@@ -1,7 +1,7 @@
-# Climatology-Driven-Dengue-Case-Forecasting-in-the-Philippines-Using-Time-Series-and-Machine-Learning
+# Climatologically-driven temporal predictive modeling of dengue cases in Philippine locations
 
 <p align="center">
-<img src="https://github.com/MaryNathalie/Llama-3.2-Evaluation-on-MMLU/blob/main/images/question_per_subject.png" width=80% height=80%>
+<img src="https://github.com/MaryNathalie/Dengue-Forecasting-in-Philippine-Locations-Through-Climate-Based-Predictive-Models/blob/main/images/graphical_abstract.jpg" width=50% height=50%>
 </p> 
 
 ### 📌 Overview
@@ -34,7 +34,7 @@ The project integrates climate variables, historical dengue case trends, and sta
 ### 🏗 Methodology
 
 <p align="center">
-<img src="https://github.com/MaryNathalie/Llama-3.2-Evaluation-on-MMLU/blob/main/images/question_per_subject.png" width=80% height=80%>
+<img src="https://github.com/MaryNathalie/Dengue-Forecasting-in-Philippine-Locations-Through-Climate-Based-Predictive-Models/blob/main/images/project_methodology.png" width=60% height=60%>
 </p> 
 
 1. **Data Preprocessing**
@@ -43,7 +43,7 @@ The project integrates climate variables, historical dengue case trends, and sta
 - **Location Clustering:** t-SNE Dimensionality Reduction and K-Means Clustering based on dengue cases and climate patterns.
 
 <p align="center">
-<img src="https://github.com/MaryNathalie/Llama-3.2-Evaluation-on-MMLU/blob/main/images/question_per_subject.png" width=80% height=80%>
+<img src="https://github.com/MaryNathalie/Dengue-Forecasting-in-Philippine-Locations-Through-Climate-Based-Predictive-Models/blob/main/images/clustered_cities.png" width=50% height=50%>
 </p> 
 
 - **Stationarity Check:** Augmented Dickey-Fuller (ADF) Test to ensuring data stability for time series modeling.
