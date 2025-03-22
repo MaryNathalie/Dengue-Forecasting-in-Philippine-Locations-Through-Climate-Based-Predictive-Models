@@ -1,9 +1,15 @@
 # Climatology-Driven-Dengue-Case-Forecasting-in-the-Philippines-Using-Time-Series-and-Machine-Learning
 
+<p align="center">
+<img src="https://github.com/MaryNathalie/Llama-3.2-Evaluation-on-MMLU/blob/main/images/question_per_subject.png" width=80% height=80%>
+</p> 
+
 ### 📌 Overview
 Dengue fever remains a significant public health concern in the Philippines, with outbreaks driven by complex climatological and environmental factors. This project explores **predictive modeling techniques** using **time series analysis** and **machine learning** to forecast dengue cases in **Bulacan, Quezon City, and Rizal**—areas identified within the same dengue case cluster.
 
 The project integrates climate variables, historical dengue case trends, and statistical models such as **SARIMAX**, alongside machine learning approaches like **Stochastic Gradient Descent (SGD) Regressor** to improve forecasting accuracy.
+
+🔗 Research Paper | Presentation
 
 ### 🎯 Objectives
 - Develop a predictive model for **dengue cases** using climatological and time-series data.
@@ -12,33 +18,65 @@ The project integrates climate variables, historical dengue case trends, and sta
 - Identify potential **outbreak periods** for proactive health interventions.
 
 ### 🏭 Data Sources
-1. **Dengue Case Data**
-- Weekly confirmed cases and deaths from January 10, 2016, to January 10, 2021 in 126 locations across the Philippines.
-- Sourced from the Department of Health-Epidemiology Bureau and hosted by the Humanitarian Data Exchange, labeled as [DOH-Epi Dengue Data 2016-2021](https://data.humdata.org/dataset/philippine-dengue-cases-and-deaths).
 
-2. **Climate Data**
-- Daily meteorological variables for each location, retrieved based on geographic coordinates.
-- Obtained from [NASA’s POWER Project](https://power.larc.nasa.gov/) via its API.
-- 59 selected climate features, aligned with the study’s objectives, are detailed in the paper.
+<div align="center">
+  
+| Dataset           | Details                                                                                | Source                                               |
+|-------------------|----------------------------------------------------------------------------------------|------------------------------------------------------|
+| Dengue Cases Data | Weekly confirmed cases and deaths (2016-2021) in 126 locations across the Philippines. | [DOH-Epi Dengue Data](https://data.humdata.org/dataset/philippine-dengue-cases-and-deaths) |
+| Climate Data      | Daily meteorological variables (rainfall, temperature, humidity, etc.)                 | [NASA’s POWER Project](https://power.larc.nasa.gov/) |
+
+</div> 
+
+> [!NOTE]
+> Selected 59 climate features that aligned with the study’s objectives.
 
 ### 🏗 Methodology
-1. **Data Preprocessing:**
-- **Temporal alignment:** Weekly aggregation of climate data.
-- **Stationarity checks:** Augmented Dickey-Fuller (ADF) test.
-- **Feature selection:** Correlation analysis to remove redundant features.
-- **Anomaly detection:** DBSCAN clustering for outlier removal.
 
-2. **Model Training:**
+<p align="center">
+<img src="https://github.com/MaryNathalie/Llama-3.2-Evaluation-on-MMLU/blob/main/images/question_per_subject.png" width=80% height=80%>
+</p> 
+
+1. **Data Preprocessing**
+- **Temporal Alignment:** Aggregated daily climate data to match dengue case granularity.
+- **Data Imputation:** Forward Fill Imputation.
+- **Location Clustering:** t-SNE Dimensionality Reduction and K-Means Clustering based on dengue cases and climate patterns.
+
+<p align="center">
+<img src="https://github.com/MaryNathalie/Llama-3.2-Evaluation-on-MMLU/blob/main/images/question_per_subject.png" width=80% height=80%>
+</p> 
+
+- **Stationarity Check:** Augmented Dickey-Fuller (ADF) Test to ensuring data stability for time series modeling.
+
+<div align="center">
+  
+| Location     | Test Statistic | p-value  | Stationary? |
+|--------------|----------------|----------|--------------|
+| Bulacan      | -4.6872        | 8.89e-5  | ✅ Yes      |
+| Quezon City  | -3.8470        | 0.0025   | ✅ Yes      |
+| Rizal        | -3.9619        | 0.0016   | ✅ Yes      |
+
+</div>
+
+2. Feature Processing
+  - Temporal Feature Engineering – Creating lagged variables, Fourier transformations, etc.
+  - Geographical Feature Engineering – Adding latitude, longitude, and location-based features.
+  - Anomaly Detection – Identifying outliers using DBSCAN.
+  - Climate Feature Selection – Choosing the most relevant meteorological variables.
+  - Univariate Correlation Check – Reducing multicollinearity.
+  - Temporal Splitting and Time Series Cross-Validation – Ensuring proper model evaluation.
+
+3. **Model Training:**
 - **Statistical Models:** SARIMA, SARIMAX (Auto-ARIMA tuning).
 - **Machine Learning Models:** SGD Regressor, XGBoost (optimized via Optuna and TPOT).
 - **Validation:** Time-series cross-validation (70% training, 30% testing).
 
-3. **Evaluation Metrics:**
+4. **Evaluation Metrics:**
 - **Mean Absolute Error (MAE):** Measures the average prediction error.
 - **Root Mean Squared Error (RMSE):** Penalizes large errors.
 - **R² Score:** Indicates model fit and predictive power.
 
-4. **Outbreak Prediction**:
+5. **Outbreak Prediction**:
 - Defined based on a moving average threshold, detecting unexpected dengue case surges.
 
 ### 📊 Results
