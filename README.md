@@ -91,7 +91,7 @@ The project integrates climate variables, historical dengue case trends, and sta
 
 ### 📊 Results
 
-#### 📌 Dengue Incidence Prediction 
+#### 1. Dengue Incidence Prediction 
 <div align="center">
 
 | Model          | MAE    | RMSE   | R-squared |
@@ -111,7 +111,7 @@ The project integrates climate variables, historical dengue case trends, and sta
 <img src="https://github.com/MaryNathalie/Dengue-Forecasting-in-Philippine-Locations-Through-Climate-Based-Predictive-Models/blob/main/images/predict_SGDRegressor.png" width=75% height=75%>
 </p> 
 
-#### 📌 Dengue Outbreak Prediction 
+#### 2. Dengue Outbreak Prediction 
 - **Bulacan:** The model predicted an outbreak before July, but the actual outbreak occurred later.
 - **Rizal:** The model predicted 10 outbreaks, but only 5 were actual outbreaks. Additionally, an outbreak was predicted in January 2020, but it actually occurred in late 2019. No outbreaks were predicted for the end of 2020, despite actual case spikes.
 - **Quezon City:** Only one outbreak prediction (before July 2019) matched the actual outbreak. The model missed all 2020 outbreaks, indicating a need for better generalization.
