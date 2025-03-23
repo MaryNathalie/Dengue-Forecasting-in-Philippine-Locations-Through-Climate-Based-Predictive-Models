@@ -89,6 +89,8 @@ The project integrates climate variables, historical dengue case trends, and sta
 - Detected unexpected dengue case surges based on a moving average threshold defined by the [WHO technical handbook for dengue surveillace](https://www.who.int/publications/i/item/9789241549738). 
 
 ## 📊 Results
+
+### Dengue Incidence Prediction 
 <div align="center">
 
 | Model          | MAE    | RMSE   | R-squared |
@@ -104,7 +106,9 @@ The project integrates climate variables, historical dengue case trends, and sta
 - Compared to **SARIMA** that performed poorly, **SARIMAX** performed well due to the inclusion of exogenous variables.  
 - **XGBoost overfitted** and failed to predict sudden spikes accurately.
 
-### 🔍 Key Insights & Future Work
+### Dengue Outbreak Prediction 
+
+## 🔍 Key Insights & Future Work
 1. Feature Expansion: Incorporating demographic and urbanization data could enhance accuracy.
 2. Deep Learning Approaches: Testing LSTMs, GRUs, and Attention Mechanisms for better sequential modeling.
 3. Spatial Dependencies: Exploring how dengue cases in nearby locations influence each other.
