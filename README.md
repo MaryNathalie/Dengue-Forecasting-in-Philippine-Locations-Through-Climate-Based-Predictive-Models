@@ -107,15 +107,15 @@ The project integrates climate variables, historical dengue case trends, and sta
 - **XGBoost overfitted** and failed to predict sudden spikes accurately.
 
 <p align="center">
-<img src="https://github.com/MaryNathalie/Dengue-Forecasting-in-Philippine-Locations-Through-Climate-Based-Predictive-Models/blob/main/images/predict_SGDRegressor.png" width=50% height=50%>
+<img src="https://github.com/MaryNathalie/Dengue-Forecasting-in-Philippine-Locations-Through-Climate-Based-Predictive-Models/blob/main/images/predict_SGDRegressor.png" width=70% height=70%>
 </p> 
 
 ### 2. Dengue Outbreak Prediction 
 
 <p float="left">
-  <img src="https://github.com/MaryNathalie/Dengue-Forecasting-in-Philippine-Locations-Through-Climate-Based-Predictive-Models/blob/main/images/outbreak_Bulacan.png" width="33%" />
-  <img src="https://github.com/MaryNathalie/Dengue-Forecasting-in-Philippine-Locations-Through-Climate-Based-Predictive-Models/blob/main/images/outbreak_QC.png" width="33%" />
-  <img src="https://github.com/MaryNathalie/Dengue-Forecasting-in-Philippine-Locations-Through-Climate-Based-Predictive-Models/blob/main/images/outbreak_Rizal.png" width="33%" />
+  <img src="https://github.com/MaryNathalie/Dengue-Forecasting-in-Philippine-Locations-Through-Climate-Based-Predictive-Models/blob/main/images/outbreak_Bulacan.png" width="30%" />
+  <img src="https://github.com/MaryNathalie/Dengue-Forecasting-in-Philippine-Locations-Through-Climate-Based-Predictive-Models/blob/main/images/outbreak_QC.png" width="30%" />
+  <img src="https://github.com/MaryNathalie/Dengue-Forecasting-in-Philippine-Locations-Through-Climate-Based-Predictive-Models/blob/main/images/outbreak_Rizal.png" width="30%" />
 </p>
 
 ## 🔍 Key Insights & Future Work
