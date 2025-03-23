@@ -8,7 +8,7 @@ Dengue fever remains a significant public health concern in the Philippines, wit
 
 The project integrates climate variables, historical dengue case trends, and statistical models such as **SARIMAX**, alongside machine learning approaches like **Stochastic Gradient Descent (SGD) Regressor** to improve forecasting accuracy.
 
-🔗 Research Paper | Presentation
+🔗 [Research Paper](https://github.com/MaryNathalie/Dengue-Forecasting-in-Philippine-Locations-Through-Climate-Based-Predictive-Models/blob/main/documents/written_report.pdf) | [Presentation](https://github.com/MaryNathalie/Dengue-Forecasting-in-Philippine-Locations-Through-Climate-Based-Predictive-Models/blob/main/documents/presentation_material.pdf)
 
 ## 🎯 Objectives
 - Develop a predictive model for **dengue cases** using climatological and time-series data.
