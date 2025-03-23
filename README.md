@@ -131,12 +131,12 @@ The project integrates climate variables, historical dengue case trends, and sta
 - Instead of predicting case counts, models could classify whether an outbreak will occur in a specific location.
 
 ### 3. Spatial Dependencies in Dengue Cases
-Dengue outbreaks are spatially correlated. To improve predictions:
-- Incorporating additional features such as population density, demographics, healthcare access, and city indices may improve accuracy.
-- Training models on specific locations, using previous weeks' data from adjacent areas as input features.
-- Incorporating spatial clustering or location coordinates into models to capture geographic trends.
+- Dengue outbreaks are spatially correlated.
+- Incorporate additional features such as population density, demographics, healthcare access, and city indices may improve accuracy.
+- Train models on specific locations, using previous weeks' data from adjacent areas as input features.
+- Incorporate spatial clustering or location coordinates into models to capture geographic trends.
 
 ### 4. Deep Learning for Time-Series Forecasting
-- While traditional models provided useful insights, more complex architectures could enhance forecasting:
+- While traditional models provided useful insights, more complex architectures could enhance forecasting.
 - LSTM & GRU networks: Proven effective for sequential data, capturing long-term dependencies.
 - Attention Mechanisms: Could help models focus on critical time periods for outbreak prediction.
