@@ -1,5 +1,7 @@
 # Climatologically-driven temporal predictive modeling of dengue cases in Philippine locations
 
+### 📌 Project Overview
+
 <p align="center">
 <img src="https://github.com/MaryNathalie/Dengue-Forecasting-in-Philippine-Locations-Through-Climate-Based-Predictive-Models/blob/main/images/graphical_abstract.jpg" width=50% height=50%>
 </p> 
