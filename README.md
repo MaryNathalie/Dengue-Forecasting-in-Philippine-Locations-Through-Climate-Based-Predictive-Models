@@ -86,7 +86,7 @@ The project integrates climate variables, historical dengue case trends, and sta
 - **R² Score:** Indicates model fit and predictive power.
 
 ### 5. Outbreak Prediction
-- Defined based on a moving average threshold, detecting unexpected dengue case surges.
+- Detected unexpected dengue case surges based on a moving average threshold defined by the [WHO technical handbook for dengue surveillace](https://www.who.int/publications/i/item/9789241549738). 
 
 ## 📊 Results
 1. SGD Regressor achieved the best performance with:
