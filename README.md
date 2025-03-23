@@ -90,7 +90,7 @@ The project integrates climate variables, historical dengue case trends, and sta
 
 ## 📊 Results
 
-### Dengue Incidence Prediction 
+### 1. Dengue Incidence Prediction 
 <div align="center">
 
 | Model          | MAE    | RMSE   | R-squared |
@@ -106,7 +106,17 @@ The project integrates climate variables, historical dengue case trends, and sta
 - Compared to **SARIMA** that performed poorly, **SARIMAX** performed well due to the inclusion of exogenous variables.  
 - **XGBoost overfitted** and failed to predict sudden spikes accurately.
 
-### Dengue Outbreak Prediction 
+<p align="center">
+<img src="https://github.com/MaryNathalie/Dengue-Forecasting-in-Philippine-Locations-Through-Climate-Based-Predictive-Models/blob/main/images/predict_SGDRegressor.png" width=50% height=50%>
+</p> 
+
+### 2. Dengue Outbreak Prediction 
+
+<p float="left">
+  <img src="https://github.com/MaryNathalie/Dengue-Forecasting-in-Philippine-Locations-Through-Climate-Based-Predictive-Models/blob/main/images/outbreak_Bulacan.png" width="33%" />
+  <img src="https://github.com/MaryNathalie/Dengue-Forecasting-in-Philippine-Locations-Through-Climate-Based-Predictive-Models/blob/main/images/outbreak_QC.png" width="33%" />
+  <img src="https://github.com/MaryNathalie/Dengue-Forecasting-in-Philippine-Locations-Through-Climate-Based-Predictive-Models/blob/main/images/outbreak_Rizal.png" width="33%" />
+</p>
 
 ## 🔍 Key Insights & Future Work
 1. Feature Expansion: Incorporating demographic and urbanization data could enhance accuracy.
