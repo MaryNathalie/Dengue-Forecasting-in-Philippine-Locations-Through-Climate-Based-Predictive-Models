@@ -89,11 +89,20 @@ The project integrates climate variables, historical dengue case trends, and sta
 - Detected unexpected dengue case surges based on a moving average threshold defined by the [WHO technical handbook for dengue surveillace](https://www.who.int/publications/i/item/9789241549738). 
 
 ## 📊 Results
-1. SGD Regressor achieved the best performance with:
-- MAE: 32.26
-- RMSE: 59.32
-- R² Score: 83.40%
-2. The model successfully captured seasonal dengue trends, but struggled with outbreak predictions, indicating a need for further feature engineering.
+<div align="center">
+
+| Model          | MAE    | RMSE   | R-squared |
+|----------------|--------|--------|-----------|
+| SARIMA         | 130.87 | 175.85 | -5.14%    |
+| SARIMAX        | 77.37  | 89.36  | 73.14%    |
+| XGBoost        | 58.48  | 91.08  | 71.93%    |
+| SGDRegressor   | 32.26  | 59.32  | 83.40%    |
+
+</div>
+
+- **SGDRegressor achieved the best performance** with the lowest error and highest accuracy.  
+- Compared to **SARIMA** that performed poorly, **SARIMAX** performed well due to the inclusion of exogenous variables.  
+- **XGBoost overfitted** and failed to predict sudden spikes accurately.
 
 ### 🔍 Key Insights & Future Work
 1. Feature Expansion: Incorporating demographic and urbanization data could enhance accuracy.
