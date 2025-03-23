@@ -76,8 +76,8 @@ The project integrates climate variables, historical dengue case trends, and sta
   - **Temporal Splitting and Time Series Cross-Validation** – 70% of the data (January 10, 2016, to July 14, 2019) was for training. 30% of the data (July 21, 2019, to January 10, 2021) was for testing. 
 
 ### 3. Model Training
-- **Statistical Models:** SARIMA, SARIMAX (Auto-ARIMA tuning).
-- **Machine Learning Models:** SGD Regressor, XGBoost (optimized via Optuna and TPOT).
+- **Statistical Models:** (Optimized with Auto-ARIMA) SARIMA, SARIMAX.
+- **Machine Learning Models:** (Selected with TPOT and optimized with Optuna) SGD Regressor, XGBoost.
 - **Validation:** Time-series cross-validation (70% training, 30% testing).
 
 ### 4. Evaluation Metrics
