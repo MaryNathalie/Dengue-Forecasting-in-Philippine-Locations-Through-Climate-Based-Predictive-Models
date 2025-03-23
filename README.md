@@ -10,13 +10,13 @@ The project integrates climate variables, historical dengue case trends, and sta
 
 🔗 [Research Paper](https://github.com/MaryNathalie/Dengue-Forecasting-in-Philippine-Locations-Through-Climate-Based-Predictive-Models/blob/main/documents/written_report.pdf) | [Presentation](https://github.com/MaryNathalie/Dengue-Forecasting-in-Philippine-Locations-Through-Climate-Based-Predictive-Models/blob/main/documents/presentation_material.pdf)
 
-## 🎯 Objectives
+### 🎯 Objectives
 - Develop a predictive model for **dengue cases** using climatological and time-series data.
 - Analyze the impact of **climate factors** on dengue incidence.
 - Compare traditional statistical models **(SARIMA, SARIMAX)** with **machine learning models**.
 - Identify potential **outbreak periods** for proactive health interventions.
 
-## 🏭 Data Sources
+### 🏭 Data Sources
 
 <div align="center">
   
@@ -30,13 +30,13 @@ The project integrates climate variables, historical dengue case trends, and sta
 > [!NOTE]
 > 59 climate features were selected that aligned with the study’s objectives.
 
-## 🏗 Methodology
+### 🏗 Methodology
 
 <p align="center">
 <img src="https://github.com/MaryNathalie/Dengue-Forecasting-in-Philippine-Locations-Through-Climate-Based-Predictive-Models/blob/main/images/project_methodology.png" width=60% height=60%>
 </p> 
 
-### 1. Data Preprocessing
+#### 1. Data Preprocessing
 - **Temporal Alignment:** Aggregated daily climate data to match dengue case granularity.
 - **Data Imputation:** Forward Fill Imputation.
 - **Location Clustering:** t-SNE Dimensionality Reduction and K-Means Clustering based on dengue cases and climate patterns.
@@ -57,7 +57,7 @@ The project integrates climate variables, historical dengue case trends, and sta
 
 </div>
 
-### 2. Feature Processing
+#### 2. Feature Processing
   - **Temporal Feature Engineering** – Ordinally encoded day, month, and year from the date, calculated lagged 4-week moving averages and applied Fourier series transformations.
   - **Geographical Feature Engineering** – Added latitude, longitude, and location label features.
   - **Anomaly Detection** – Density-Based Spatial Clustering of Applications with Noise (DBSCAN).
@@ -75,22 +75,22 @@ The project integrates climate variables, historical dengue case trends, and sta
 
   - **Temporal Splitting and Time Series Cross-Validation** – 70% of the data (January 10, 2016, to July 14, 2019) was for training. 30% of the data (July 21, 2019, to January 10, 2021) was for testing. 
 
-### 3. Model Training
+#### 3. Model Training
 - **Statistical Models:** (Optimized with Auto-ARIMA) SARIMA, SARIMAX.
 - **Machine Learning Models:** (Selected with TPOT and optimized with Optuna) SGD Regressor, XGBoost.
 - **Validation:** Time-series cross-validation (70% training, 30% testing).
 
-### 4. Evaluation Metrics
-- **Mean Absolute Error (MAE):** Measures the average prediction error.
-- **Root Mean Squared Error (RMSE):** Penalizes large errors.
-- **R² Score:** Indicates model fit and predictive power.
+#### 4. Evaluation Metrics
+- **Mean Absolute Error (MAE)**
+- **Root Mean Squared Error (RMSE)**
+- **R² Score**
 
-### 5. Outbreak Prediction
+#### 5. Outbreak Prediction
 - Detected unexpected dengue case surges based on a moving average threshold defined by the [WHO technical handbook for dengue surveillace](https://www.who.int/publications/i/item/9789241549738). 
 
-## 📊 Results
+### 📊 Results
 
-### 1. Dengue Incidence Prediction 
+#### 1. Dengue Incidence Prediction 
 <div align="center">
 
 | Model          | MAE    | RMSE   | R-squared |
@@ -110,7 +110,7 @@ The project integrates climate variables, historical dengue case trends, and sta
 <img src="https://github.com/MaryNathalie/Dengue-Forecasting-in-Philippine-Locations-Through-Climate-Based-Predictive-Models/blob/main/images/predict_SGDRegressor.png" width=75% height=75%>
 </p> 
 
-### 2. Dengue Outbreak Prediction 
+#### 2. Dengue Outbreak Prediction 
 - **Bulacan:** The model predicted an outbreak before July, but the actual outbreak occurred later.
 - **Rizal:** The model predicted 10 outbreaks, but only 5 were actual outbreaks. Additionally, an outbreak was predicted in January 2020, but it actually occurred in late 2019. No outbreaks were predicted for the end of 2020, despite actual case spikes.
 - **Quezon City:** Only one outbreak prediction (before July 2019) matched the actual outbreak. The model missed all 2020 outbreaks, indicating a need for better generalization.
@@ -121,22 +121,22 @@ The project integrates climate variables, historical dengue case trends, and sta
   <img src="https://github.com/MaryNathalie/Dengue-Forecasting-in-Philippine-Locations-Through-Climate-Based-Predictive-Models/blob/main/images/outbreak_Rizal.png" width="30%" />
 </p>
 
-## 🔍 Key Insights & Future Work
-### 1. Sensitivity of Outbreak Thresholds
+### 🔍 Key Insights & Future Work
+#### 1. Sensitivity of Outbreak Thresholds
 - Small variations in data significantly impact predictions, leading to false positives or missed outbreaks.
 - More robust thresholding methods and improved feature engineering are needed to enhance outbreak detection.
 
-### 2. Model Improvements
+#### 2. Model Improvements
 - The models struggled to differentiate between true outbreaks and case spikes.
 - Instead of predicting case counts, models could classify whether an outbreak will occur in a specific location.
 
-### 3. Spatial Dependencies in Dengue Cases
+#### 3. Spatial Dependencies in Dengue Cases
 - Dengue outbreaks are spatially correlated.
 - Incorporate additional features such as population density, demographics, healthcare access, and city indices may improve accuracy.
 - Train models on specific locations, using previous weeks' data from adjacent areas as input features.
 - Incorporate spatial clustering or location coordinates into models to capture geographic trends.
 
-### 4. Deep Learning for Time-Series Forecasting
+#### 4. Deep Learning for Time-Series Forecasting
 - While traditional models provided useful insights, more complex architectures could enhance forecasting.
 - LSTM & GRU networks: Proven effective for sequential data, capturing long-term dependencies.
 - Attention Mechanisms: Could help models focus on critical time periods for outbreak prediction.
