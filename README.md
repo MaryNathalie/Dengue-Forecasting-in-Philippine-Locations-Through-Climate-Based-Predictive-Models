@@ -58,12 +58,22 @@ The project integrates climate variables, historical dengue case trends, and sta
 </div>
 
 ### 2. Feature Processing
-  - Temporal Feature Engineering – Creating lagged variables, Fourier transformations, etc.
-  - Geographical Feature Engineering – Adding latitude, longitude, and location-based features.
-  - Anomaly Detection – Identifying outliers using DBSCAN.
-  - Climate Feature Selection – Choosing the most relevant meteorological variables.
-  - Univariate Correlation Check – Reducing multicollinearity.
-  - Temporal Splitting and Time Series Cross-Validation – Ensuring proper model evaluation.
+  - **Temporal Feature Engineering** – Ordinally encoded day, month, and year from the date, calculated lagged 4-week moving averages and applied Fourier series transformations.
+  - **Geographical Feature Engineering** – Added latitude, longitude, and location label features.
+  - **Anomaly Detection** – Density-Based Spatial Clustering of Applications with Noise (DBSCAN).
+
+<p align="center">
+<img src="https://github.com/MaryNathalie/Dengue-Forecasting-in-Philippine-Locations-Through-Climate-Based-Predictive-Models/blob/main/images/DBSCAN.png" width=50% height=50%>
+</p> 
+
+  - **Climate Feature Selection** – Selected based on their relevance to environmental factors–solar radiation (Group 1), cloud cover (Group 2), hydrological variables (Group 3), temperature (Group 4), and wind speed (Group 5).
+  - **Univariate Correlation Check** – Remove highly correlated features chec with Pearson Univariate Correlation Analysis.
+
+<p align="center">
+<img src="https://github.com/MaryNathalie/Dengue-Forecasting-in-Philippine-Locations-Through-Climate-Based-Predictive-Models/blob/main/images/correlation.png" width=50% height=50%>
+</p> 
+
+  - **Temporal Splitting and Time Series Cross-Validation** – 70% of the data (January 10, 2016, to July 14, 2019) was for training. 30% of the data (July 21, 2019, to January 10, 2021) was for testing. 
 
 ### 3. Model Training
 - **Statistical Models:** SARIMA, SARIMAX (Auto-ARIMA tuning).
