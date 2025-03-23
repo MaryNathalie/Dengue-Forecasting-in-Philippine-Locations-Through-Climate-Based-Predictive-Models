@@ -96,7 +96,7 @@ The project integrates climate variables, historical dengue case trends, and sta
 | SARIMA         | 130.87 | 175.85 | -5.14%    |
 | SARIMAX        | 77.37  | 89.36  | 73.14%    |
 | XGBoost        | 58.48  | 91.08  | 71.93%    |
-| SGDRegressor   | 32.26  | 59.32  | 83.40%    |
+| SGDRegressor   | **32.26**  | **59.32**  | **83.40%**    |
 
 </div>
 
