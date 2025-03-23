@@ -111,6 +111,9 @@ The project integrates climate variables, historical dengue case trends, and sta
 </p> 
 
 ### 2. Dengue Outbreak Prediction 
+- Bulacan: The model predicted an outbreak before July, but the actual outbreak occurred later.
+- Rizal: The model predicted 10 outbreaks, but only 5 were actual outbreaks. Additionally, an outbreak was predicted in January 2020, but it actually occurred in late 2019. No outbreaks were predicted for the end of 2020, despite actual case spikes.
+- Quezon City: Only one outbreak prediction (before July 2019) matched the actual outbreak. The model missed all 2020 outbreaks, indicating a need for better generalization.
 
 <p float="left">
   <img src="https://github.com/MaryNathalie/Dengue-Forecasting-in-Philippine-Locations-Through-Climate-Based-Predictive-Models/blob/main/images/outbreak_Bulacan.png" width="30%" />
@@ -119,6 +122,21 @@ The project integrates climate variables, historical dengue case trends, and sta
 </p>
 
 ## 🔍 Key Insights & Future Work
-1. Feature Expansion: Incorporating demographic and urbanization data could enhance accuracy.
-2. Deep Learning Approaches: Testing LSTMs, GRUs, and Attention Mechanisms for better sequential modeling.
-3. Spatial Dependencies: Exploring how dengue cases in nearby locations influence each other.
+### 1. Sensitivity of Outbreak Thresholds
+- Small variations in data significantly impact predictions, leading to false positives or missed outbreaks.
+- More robust thresholding methods and improved feature engineering are needed to enhance outbreak detection.
+
+### 2. Model Improvements
+- The models struggled to differentiate between true outbreaks and case spikes.
+- Instead of predicting case counts, models could classify whether an outbreak will occur in a specific location.
+
+### 3. Spatial Dependencies in Dengue Cases
+Dengue outbreaks are spatially correlated. To improve predictions:
+- Incorporating additional features such as population density, demographics, healthcare access, and city indices may improve accuracy.
+- Training models on specific locations, using previous weeks' data from adjacent areas as input features.
+- Incorporating spatial clustering or location coordinates into models to capture geographic trends.
+
+### 4. Deep Learning for Time-Series Forecasting
+- While traditional models provided useful insights, more complex architectures could enhance forecasting:
+- LSTM & GRU networks: Proven effective for sequential data, capturing long-term dependencies.
+- Attention Mechanisms: Could help models focus on critical time periods for outbreak prediction.
